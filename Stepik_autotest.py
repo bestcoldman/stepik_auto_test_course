@@ -12,8 +12,7 @@ link = "http://suninjuly.github.io/alert_accept.html"
 try:
     browser = webdriver.Chrome()
     browser.get(link)
-    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
-    button.click()
+    button = browser.find_element(By.CSS_SELECTOR, "button.btn").click
     confirm = browser.switch_to.alert
     confirm.accept() # Закрываем алерт
     x_element = browser.find_element(By.CSS_SELECTOR, "[id='input_value']")
@@ -21,8 +20,8 @@ try:
     y = calc(x)
     input1 = browser.find_element(By.CSS_SELECTOR, "[id='answer']")
     input1.send_keys(y)
-    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
-    button.click()
+    button = browser.find_element(By.CSS_SELECTOR, "button.btn").click
+
 
 
 finally:
