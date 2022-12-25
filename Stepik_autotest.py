@@ -15,7 +15,7 @@ try:
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
     confirm = browser.switch_to.alert
-    confirm.accept()
+    confirm.accept() # Закрываем алерт
     x_element = browser.find_element(By.CSS_SELECTOR, "[id='input_value']")
     x = x_element.text
     y = calc(x)
@@ -23,6 +23,7 @@ try:
     input1.send_keys(y)
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
+
 
 finally:
     # успеваем скопировать код за 30 секунд
